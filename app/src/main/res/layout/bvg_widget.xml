@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    android:orientation="vertical"
+    android:padding="7sp"
+    android:theme="@style/Theme.BvgDepartureWidget.AppWidgetContainer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_title"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tv_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_subtitle"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/button_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:contentDescription="@string/refresh_image_button_content_description"
+                android:src="@drawable/ic_baseline_refresh_24"
+                tools:src="@drawable/ic_baseline_refresh_24" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewBvgStops"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:background="@color/cardview_dark_background"
+        android:divider="#eeeeee"
+        android:dividerHeight="1dp"
+        tools:listitem="@layout/list_item_bvg_location" />
+
+</LinearLayout>
+

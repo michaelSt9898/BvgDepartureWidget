@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:configure="com.example.bvgdeparturewidget.ConfigurationActivity"
+    android:description="@string/app_widget_description"
+    android:initialKeyguardLayout="@layout/bvg_widget"
+    android:initialLayout="@layout/bvg_widget"
+    android:minWidth="180dp"
+    android:minHeight="180dp"
+    android:previewImage="@drawable/bvg_widget_preview"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="0"
+    android:widgetCategory="home_screen"
+    android:widgetFeatures="reconfigurable" />

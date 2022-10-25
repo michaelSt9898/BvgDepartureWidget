@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BvgStopDetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/frame_chip_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_selectedServices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.Chip
+                style="@style/ToggleChipViewWithIconSquare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/chip_tag_tram"
+                android:text="@string/chip_tram_text"
+                app:chipIcon="@drawable/icon_tram" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/ToggleChipViewWithIconSquare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/chip_tag_subway"
+                android:text="@string/chip_subway_text"
+                app:chipIcon="@drawable/icon_ubahn" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/ToggleChipViewWithIconRound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/chip_tag_suburban"
+                android:text="@string/chip_suburban_text"
+                app:chipIcon="@drawable/icon_sbahn" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/ToggleChipViewWithIconRound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/chip_tag_bus"
+                android:text="@string/chip_bus_text"
+                app:chipIcon="@drawable/icon_bus" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/ToggleChipViewWithIconSquare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/chip_tag_regional"
+                android:text="@string/chip_regional_text"
+                app:chipIcon="@drawable/icon_db" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/ToggleChipViewWithIconSquare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/chip_tag_express"
+                android:text="@string/chip_express_text"
+                app:chipIcon="@drawable/icon_ice" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/ToggleChipViewWithIconRound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/chip_tag_ferry"
+                android:text="@string/chip_ferry_text"
+                app:chipIcon="@drawable/icon_ferry" />
+
+        </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frame_chip_group">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_view_error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/frame_chip_group" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginBottom="40sp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frame_chip_group">
+
+        <ListView
+            android:id="@+id/list_view_filtered_departures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="15sp"
+            android:layout_marginEnd="10sp"
+            android:dividerHeight="0sp"
+            app:layout_constraintTop_toBottomOf="@id/frame_chip_group" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

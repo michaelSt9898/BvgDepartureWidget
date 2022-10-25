@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5sp">
+
+    <ImageView
+        android:id="@+id/icon_departure_service"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:contentDescription="@string/line_service_content_description"
+        android:padding="3sp"
+        android:src="@drawable/icon_bvg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_departure_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15sp"
+        android:text="@string/sample_text_line_name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/icon_departure_service"
+        app:layout_constraintTop_toTopOf="@id/icon_departure_service" />
+
+    <TextView
+        android:id="@+id/text_view_departure_destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_text_remark"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/icon_departure_service"
+        app:layout_constraintStart_toStartOf="@id/text_view_departure_name" />
+
+    <TextView
+        android:id="@+id/text_view_departure_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_text_departure_time"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icon_departure_service" />
+
+    <TextView
+        android:id="@+id/text_view_departure_delay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_text_delay"
+        android:textColor="@color/delay_late"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/icon_departure_service"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+        android:layout_width="0sp"
+        android:layout_height="1sp"
+        android:layout_marginTop="5sp"
+        app:dividerColor="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@id/text_view_departure_delay"
+        app:layout_constraintStart_toStartOf="@id/text_view_departure_name"
+        app:layout_constraintTop_toBottomOf="@id/icon_departure_service"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/text_view_remarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_text_remarks"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/text_view_departure_name"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

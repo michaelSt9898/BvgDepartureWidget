@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">BvgDepartureWidget</string>
+    <string name="appwidget_text">BVG Departures</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">A widget to show the next departures of a configured stop</string>
+    <string name="text_title">BVG Departures</string>
+
+    <string name="url_stops">https://v5.bvg.transport.rest/locations?poi=false&amp;addresses=false&amp;query=%s</string>
+    <string name="hint_text_station_search">Enter Station here</string>
+    <string name="text_view_hint">Search for a station</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="create_widget_button_description">Create Widget</string>
+
+    <string name="ac_api_location_hint_found">Found locations</string>
+    <string name="ac_api_location_hint_nothing">No locations found</string>
+
+    <string name="text_subtitle">Select a stop to see its departures</string>
+    <string name="chip_tram_text">Tram</string>
+    <string name="chip_subway_text">U-Bahn</string>
+    <string name="chip_suburban_text">S-Bahn</string>
+    <string name="chip_bus_text">Bus</string>
+    <string name="chip_regional_text">Regio</string>
+    <string name="chip_express_text">ICE</string>
+    <string name="chip_ferry_text">Fähre</string>
+
+    <!-- Activity Departures chip group tags -->
+    <string name="chip_tag_tram">CHIP_TAG_TRAM</string>
+    <string name="chip_tag_subway">CHIP_TAG_SUBWAY</string>
+    <string name="chip_tag_suburban">CHIP_TAG_SUBURBAN</string>
+    <string name="chip_tag_bus">CHIP_TAG_BUS</string>
+    <string name="chip_tag_ferry">CHIP_TAG_FERRY</string>
+    <string name="chip_tag_regional">CHIP_TAG_REGIONAL</string>
+    <string name="chip_tag_express">CHIP_TAG_EXPRESS</string>
+
+    <string name="bvg_line_delay">%c %d</string>
+    <string name="sample_text_departure_time">19:17</string>
+    <string name="sample_text_delay">+10 minutes</string>
+    <string name="sample_text_remark">Some departure destination</string>
+    <string name="sample_text_line_name">M17</string>
+    <string name="line_service_content_description">icon of line service</string>
+    <string name="sample_text_remarks">some remarks</string>
+    <string name="no_api_data_received_error_message">Error while fetching data from API</string>
+    <string name="refresh_image_button_content_description">Button to refresh the layout</string>
+    <string name="icon_location_type_content_description">type of location icon</string>
+    <string name="autocomplete_hint">Enter a public transport stop</string>
+
+
+</resources>

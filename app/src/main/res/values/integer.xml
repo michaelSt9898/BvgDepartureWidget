@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="autocompletion_suggestions">5</integer>
+</resources>
